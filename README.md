@@ -1,9 +1,7 @@
-# Nome do produto
-> Descrição curta sobre o que seu projeto faz.
+# Orders
+> Microserviço responsável pelos pedidos feitos no ecommerce.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+[![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
 
 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 

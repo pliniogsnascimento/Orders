@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F4976DDF-C0A2-44E9-B6A2-2EC6628369D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Api", "..\Orders.Api\Orders.Api.csproj", "{EFC7CE0E-8F0E-460D-BE20-310F6DD15020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orders.Api", "Orders.Api\Orders.Api.csproj", "{3ECA533C-2C5D-4135-A74B-DA25EE574732}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,16 +17,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EFC7CE0E-8F0E-460D-BE20-310F6DD15020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EFC7CE0E-8F0E-460D-BE20-310F6DD15020}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EFC7CE0E-8F0E-460D-BE20-310F6DD15020}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EFC7CE0E-8F0E-460D-BE20-310F6DD15020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECA533C-2C5D-4135-A74B-DA25EE574732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECA533C-2C5D-4135-A74B-DA25EE574732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECA533C-2C5D-4135-A74B-DA25EE574732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECA533C-2C5D-4135-A74B-DA25EE574732}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EFC7CE0E-8F0E-460D-BE20-310F6DD15020} = {8A4F530E-9BED-4F9D-8522-E74B238D25EE}
+		{3ECA533C-2C5D-4135-A74B-DA25EE574732} = {8A4F530E-9BED-4F9D-8522-E74B238D25EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {294CA61C-D237-44AF-8ADD-458E6D75809A}

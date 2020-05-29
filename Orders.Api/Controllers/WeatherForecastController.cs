@@ -26,7 +26,6 @@ namespace Orders.Api.Controllers
         [HttpGet]
         public string Get()
         {
-            _logger.LogInformation(1001, "Hello world was called!");
             _logger.LogWarning(1002, "Api doesn't have a database!");
             return "Hello World";
         }

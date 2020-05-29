@@ -26,6 +26,7 @@ namespace Orders.Api.Controllers
         [HttpGet]
         public string Get()
         {
+            _logger.LogInformation("Teste slack");
             return "Hello World";
         }
     }

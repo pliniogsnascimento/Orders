@@ -1,1 +1,6 @@
 .vs/
+.vscode/
+.dll/
+
+obj/
+bin/

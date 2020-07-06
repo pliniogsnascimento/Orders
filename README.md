@@ -21,14 +21,12 @@ Docker:
 
 ```sh
 docker build -t ordersapi .
-docker run 
+docker run -p 5000:5000 ordersapi
 ```
 
 ## Exemplo de uso
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado. Adicione blocos de códigos e, se necessário, screenshots.
-
-_Para mais exemplos, consulte a [Wiki][wiki]._ 
+Após rodar o projeto, acesse http://localhost:5000/swagger para obter mais informações sobre a API.
 
 ## Configuração para Desenvolvimento
 

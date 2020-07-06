@@ -7,11 +7,21 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["Orders.Api/Orders.Api.csproj", "Orders.Api/"]
+COPY ["src/Presentation/Orders.Api/Orders.Api.csproj", "Orders.Api/"]
+COPY ["src/Core/Orders.Domain/Orders.Domain.csproj", "Orders.Domain/"]
+COPY ["src/Infrastructure/Orders.Infrastructure/Orders.Infrastructure.csproj", "Orders.Infrastructure/"]
+COPY ["src/Tests/Orders.Test/Orders.Test.csproj", "Orders.Test/"]
 RUN dotnet restore "Orders.Api/Orders.Api.csproj"
-COPY . .
+COPY "src/Presentation/" .
+COPY "src/Infrastructure/" .
+COPY "src/Core/" .
+COPY "src/Tests/" .
 WORKDIR "/src/Orders.Api"
 RUN dotnet build "Orders.Api.csproj" -c Release -o /app/build
+
+FROM build AS test
+WORKDIR "/src/Orders.Test"
+RUN dotnet test 
 
 FROM build AS publish
 RUN dotnet publish "Orders.Api.csproj" -c Release -o /app/publish

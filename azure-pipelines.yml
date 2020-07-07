@@ -3,13 +3,17 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+- development
 
 resources:
 - repo: self
 
 variables:
-  tag: '$(Build.BuildId)'
+  major-release: 0
+  minor-release: 0
+  containerRepo: pliniogsnascimento
+  imageName: '$(containerRepo)/ordersapi'
+  imageVersion: $(major-release).$(minor-release).$(build.buildId)
 
 stages:
 - stage: Build
@@ -26,4 +30,4 @@ stages:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
-          $(tag)
+          $(imageName):$(imageVersion)

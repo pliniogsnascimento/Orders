@@ -1,4 +1,4 @@
-# Orders
+# Orders API
 > Microserviço responsável pelos pedidos feitos no ecommerce.
 
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)

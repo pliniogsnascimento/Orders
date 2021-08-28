@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ordersapi
+  namespace: ecm
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ordersapi
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: ordersapi
+        tier: backend
+    spec:
+      serviceAccountName: ordersapi
+      containers:
+        - name: ordersapi
+          image: pliniogsnascimento/ordersapi:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "50m"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 3600
